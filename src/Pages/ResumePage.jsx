@@ -4,7 +4,7 @@ import {useState} from "react";
 
 const ResumePage = () => {
     const handleDownloadCV = () => {
-        window.open('src/assets/Tanuj_Kandpal_Resume.pdf', '_blank')
+        open('src/assets/Tanuj_Kandpal_Resume.pdf', '_blank')
     }
     const [mode, SetMode] = useState(false);
 
