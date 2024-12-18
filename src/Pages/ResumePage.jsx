@@ -1,48 +1,57 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
+import {FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaDownload} from 'react-icons/fa';
 import {MdModeNight, MdOutlineLightMode} from "react-icons/md";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const ResumePage = () => {
     const handleDownloadCV = () => {
         window.open('src/assets/Tanuj_Kandpal_Resume.pdf', '_blank')
     }
-    const[mode, SetMode] = useState(false);
-        function  handleMode(){
-            SetMode((prevMode) => !prevMode);
-        }
+    const [mode, SetMode] = useState(false);
+
+    function handleMode() {
+        SetMode((prevMode) => !prevMode);
+    }
 
     return (
-        <div className={`min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8  ${mode?"bg-gray-950":"bg-blue-950"}`}>
+        <div className={`min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8  ${mode ? "bg-gray-950" : "bg-blue-950"}`}>
             <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
                 <div className="md:flex">
                     <div className="p-8">
-                        <div className="flex items-center justify-between uppercase tracking-wide text-sm text-indigo-500 font-semibold">Software Engineer
+                        <div
+                            className="flex items-center justify-between uppercase tracking-wide text-sm text-indigo-500 font-semibold">Software
+                            Engineer
                             <div className="">
-                                <button onClick={handleMode}>{mode?<MdModeNight className="h-8 w-8 text-black"/>:<MdOutlineLightMode className="h-8 w-8 text-black"/>}</button>
+                                <button onClick={handleMode}>{mode ? <MdModeNight className="h-8 w-8 text-black"/> :
+                                    <MdOutlineLightMode className="h-8 w-8 text-black"/>}</button>
                             </div>
                         </div>
 
                         <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Tanuj
                             Kandpal</h1>
                         <p className="mt-2 text-gray-500 flex items-center">
-                            <FaMapMarkerAlt className="mr-2" />
+                            <FaMapMarkerAlt className="mr-2"/>
                             Gurugram, India
                         </p>
                         <p className="mt-4 max-w-3xl text-xl text-gray-500">
-                            Experience and proficient in developing scalable and high-performance software solutions for clients. Skilled with hands-on experience in React.js, HTML, CSS, JS. Adept at collaborating with cross-functional teams to deliver innovative solutions that meet and exceed client expectations.
+                            Experience and proficient in developing scalable and high-performance software solutions for
+                            clients. Skilled with hands-on experience in React.js, HTML, CSS, JS. Adept at collaborating
+                            with cross-functional teams to deliver innovative solutions that meet and exceed client
+                            expectations.
                         </p>
                         <div className="mt-6 flex space-x-4">
-                            <a href="https://github.com/Tanuj-Kandpal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500">
+                            <a href="https://github.com/Tanuj-Kandpal" target="_blank" rel="noopener noreferrer"
+                               className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">GitHub</span>
-                                <FaGithub className="h-6 w-6" />
+                                <FaGithub className="h-6 w-6"/>
                             </a>
-                            <a href="https://www.linkedin.com/in/tanuj-kandpal-57186b193/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500">
+                            <a href="https://www.linkedin.com/in/tanuj-kandpal-57186b193/" target="_blank"
+                               rel="noopener noreferrer" className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">LinkedIn</span>
-                                <FaLinkedin className="h-6 w-6" />
+                                <FaLinkedin className="h-6 w-6"/>
                             </a>
                             <a href="mailto:takandpal@gmail.com" className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">Email</span>
-                                <FaEnvelope className="h-6 w-6" />
+                                <FaEnvelope className="h-6 w-6"/>
                             </a>
                         </div>
                     </div>
@@ -62,7 +71,7 @@ const ResumePage = () => {
                         </div>
                         <div>
                             <h3 className="text-xl font-semibold text-gray-700">Associate Consultant</h3>
-                            <p className="text-gray-600">Capgemini • April-2021 -  Oct.-2024</p>
+                            <p className="text-gray-600">Capgemini • April-2021 - Oct.-2024</p>
                             <ul className="mt-2 list-disc list-inside text-gray-500">
                                 <li>Developed and maintained multiple client-facing web applications</li>
                                 <li>Collaborated with UX designers to implement responsive designs</li>
@@ -75,7 +84,7 @@ const ResumePage = () => {
                 <div className="px-8 py-6 border-t border-gray-200">
                     <h2 className="text-2xl font-bold text-gray-800">Skills</h2>
                     <div className="mt-4 flex flex-wrap gap-2">
-                        {['React', 'JavaScript','Java', 'HTML', 'CSS', 'Node.js', 'Git', 'Postman', 'RESTful APIs', 'GraphQL', 'Agile/Scrum', 'SQL','Selenium','Appium','Browserstack','Github','Gitlab'].map((skill) => (
+                        {['React', 'JavaScript', 'Java', 'HTML', 'CSS', 'Node.js', 'Git', 'Postman', 'RESTful APIs', 'GraphQL', 'Agile/Scrum', 'SQL', 'Selenium', 'Appium', 'Browserstack', 'Github', 'Gitlab'].map((skill) => (
                             <span key={skill} className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">
                 {skill}
               </span>
@@ -96,7 +105,7 @@ const ResumePage = () => {
                         onClick={handleDownloadCV}
                         className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center transition duration-300 ease-in-out"
                     >
-                        <FaDownload className="mr-2" />
+                        <FaDownload className="mr-2"/>
                         Download CV
                     </button>
                 </div>
