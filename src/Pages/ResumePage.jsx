@@ -1,10 +1,10 @@
 import {FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaDownload} from 'react-icons/fa';
 import {MdModeNight, MdOutlineLightMode} from "react-icons/md";
 import {useState} from "react";
-
+const driveLink =import.meta.env.VITE_APP_DRIVE_LINK;
 const ResumePage = () => {
     const handleDownloadCV = () => {
-        open('src/assets/Tanuj_Kandpal_Resume.pdf', '_blank')
+        open(driveLink, '_blank')
     }
     const [mode, SetMode] = useState(false);
 
